@@ -65,8 +65,50 @@ export kdf_do=optional
 make
 cp build/gnuk.bin /home/ran/gnukblue.bin
 ```
+
 ## Pre-built binaries
 They are here for myself and archival reasons. I strongly advise you though to build your own: This is a security device and flashing binaries by random people of the internet is not encouraged. Though I promise they will work and were not tampered with, you cannot know that and being lazy is no excuse.
+
+## Flashing with OpenOCD via SWD
+
+Running the JTAG protocol on top, the Serial Wire Debug (SWD) provides an elegant electrical alternative JTAG interface over 2-pins (SWDIO/SWCLK). The wire protocol is bi-directional and SWD is a recognized ARM CPU standard and defined in the ARM Debug Interface documentation.
+
+Let's initialize a few files on the go first.  
+
+Create a ```openocd.cfg```:
+```
+telnet_port 4444
+source [find interface/stlink-v2.cfg]
+source [find target/stm32f1x.cfg]
+set WORKAREASIZE 0x10000
+```
+Also create a ```openocd2.cfg``` for Chinese clones:
+```
+telnet_port 4444
+source [find interface/stlink-v2.cfg]
+source [find target/apm32f1x.cfg]
+set WORKAREASIZE 0x10000
+```
+
+Create a copy of ```stm32f1x.cfg``` and call it ```apm32f1x.cfg```, then change the value in line 44 defining the ```_CPUTAPID```:
+```
+   } {
+      # this is the SW-DP tap id not the jtag tap id
+      set _CPUTAPID 0x1ba01477
+   }
+}
+```
+Into the value for the Chinese Geehy APM32 arm clone, should you need it, you have it ready:
+```
+   } {
+      # this is the SW-DP tap id not the jtag tap id
+      set _CPUTAPID 0x2ba01477
+   }
+}
+```
+This is probably the 
+
+
 
 ## License
 Licensed under the WTFPL license.
