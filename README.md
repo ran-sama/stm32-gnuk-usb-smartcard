@@ -131,8 +131,9 @@ reset halt
 ![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/telnet_console.png)
 The telnet console in putty for ```localhost 4444```.
 
-It will now be ready to be plugged into USB on its own without your JTAG interface! It works out of the box on both Windows and *NIX as HID and smartcard.
-
+It will now be ready to be plugged into USB on its own without your JTAG interface! It works out of the box on both Windows and *NIX as card reader and smartcard in one device.
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/windows_test.png)
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/raspi_test.png)
 
 
 ## License
