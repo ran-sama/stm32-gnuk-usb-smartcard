@@ -106,7 +106,8 @@ Into the value for the Chinese Geehy APM32 arm clone, should you need it, you ha
    }
 }
 ```
-This is probably the 
+Now we both support STM32 and APM32 and need not to care what they shipped us!
+
 
 
 
