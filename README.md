@@ -108,6 +108,30 @@ Into the value for the Chinese Geehy APM32 arm clone, should you need it, you ha
 ```
 Now we both support STM32 and APM32 and need not to care what they shipped us!
 
+Launch OpenOCD on *NIX or Windows, it both just works:
+```
+# for real STM32
+openocd -f openocd.cfg
+#for the APM32 clones:
+openocd -f openocd2.cfg
+```
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/OpenOCD_cli.jpg)
+Terrible camera pic, was lazy. If your pins make correct contact you should be greeted by a welcoming output and 3 ports are allocated for your pleasure.
+
+Now we flash in telnet, I recommend PuTTY on Windows and in this example we flash an ST-Link v2 clone to Gnuk with the .bin located in C:\ drive:
+```
+reset halt
+stm32f1x unlock 0
+reset halt
+stm32f1x mass_erase 0
+flash write_bank 0 C:\gnukst.bin 0
+stm32f1x lock 0
+reset halt
+```
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/telnet_console.png)
+The telnet console in putty for ```localhost 4444```.
+
+It will now be ready to be plugged into USB on its own without your JTAG interface! It works out of the box on both Windows and *NIX as HID and smartcard.
 
 
 
