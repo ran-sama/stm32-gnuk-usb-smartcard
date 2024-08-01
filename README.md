@@ -51,9 +51,9 @@ For the ST-Link-v2 rip-off from China we use:
 git clone --recurse-submodules https://salsa.debian.org/gnuk-team/gnuk/gnuk --branch "release/1.2.19"
 cd gnuk/src
 export kdf_do=optional
-./configure --enable-factory-reset --target=BLUE_PILL --vidpid=234b:0000 --enable-certdo
+./configure --enable-factory-reset --target=ST_DONGLE --vidpid=234b:0000 --enable-certdo
 make
-cp build/gnuk.bin /home/ran/gnukblue.bin
+cp build/gnuk.bin /home/ran/gnukst.bin
 ```
 
 For the STM32 "bluepill" the changes are trivial as expected:
