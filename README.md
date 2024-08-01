@@ -69,7 +69,18 @@ cp build/gnuk.bin /home/ran/gnukblue.bin
 ## Pre-built binaries
 They are here for myself and archival reasons. I strongly advise you though to build your own: This is a security device and flashing binaries by random people of the internet is not encouraged. Though I promise they will work and were not tampered with, you cannot know that and being lazy is no excuse.
 
-## Flashing with OpenOCD via SWD
+## Pin-out on the PCBs, always double-check with a multimeter
+
+The good boards have them marked:
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/pinout_JTAG_orig.jpg)
+
+The bad boards have microscopic solder beads at sub-millimetre size that are hard to connect to with DuPont connectors:
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/pinout_JTAG_clone.jpg)
+
+As with the programmers, measure first and avoid surprises in polarity.
+
+
+## Flashing with OpenOCD via SWD on ST_DONGLE
 
 Running the JTAG protocol on top, the Serial Wire Debug (SWD) provides an elegant electrical alternative JTAG interface over 2-pins (SWDIO/SWCLK). The wire protocol is bi-directional and SWD is a recognized ARM CPU standard and defined in the ARM Debug Interface documentation.
 
@@ -135,7 +146,21 @@ It will now be ready to be plugged into USB on its own without your JTAG interfa
 ![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/windows_test.png)  
 ![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/raspi_test.png)  
 
-Factory resetting and loading it with your own keys is recommended at this point, a lesson that I leave to the inclined reader to figure out with a starting point:
+## Flashing with STM32 Flash loader via UART on BLUE_PILL
+
+I am sorry, but I couldn't bother. Use a CH34x or CP210x USB to UART adapter and the v2.8.0 of:
+```
+https://www.st.com/en/development-tools/flasher-stm32.html#get-software
+```
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/lazy_UART_bluepill.jpg)
+
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/blue_flash_tool.png)
+
+Observe that 128KB was selected, though these only "officially" support 64KB. If the upload was successfuly you got a good batch. Many companies don't truly care to have different line-ups and just pretend there is a real difference. We can totally live with that.
+
+## Factory resetting and loading it with your own keys
+
+A mandatory step and a lesson left to the inclined reader to figure out, though a starting point is provided hereby:
 ```
 gpg --edit-card
 gpg/card> admin
