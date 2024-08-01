@@ -135,6 +135,17 @@ It will now be ready to be plugged into USB on its own without your JTAG interfa
 ![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/windows_test.png)  
 ![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/raspi_test.png)  
 
+Factory resetting and loading it with your own keys is recommended at this point, a lesson that I leave to the inclined reader to figure out with a starting point:
+```
+gpg --edit-card
+gpg/card> admin
+gpg/card> factory-reset
+```
+```
+gpg --full-generate-key
+gpg --edit-key MyKey
+gpg> keytocard
+```
 
 ## License
 Licensed under the WTFPL license.
