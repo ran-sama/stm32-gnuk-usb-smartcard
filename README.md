@@ -4,7 +4,8 @@ The Gnuk smartcard based on the STM32F1x and Geehy APM32.
 ## Introduction
 
 Secure mail exchange via GPG, code signing and verified Github commits are popular use cases of asymmetric cryptography utilizing cryptosystems such as RSA4096 or modern Ed/cv25519. Before you do anything:  
-Remove the covers of the sticks, because their pin-out is often wrong. Check with your multimeter for voltages. The PCB is often correct but the cases are deceptive.
+Remove the covers of the sticks, because their pin-out is often wrong. Check with your multimeter for voltages.  
+The PCB is often correct but the cases are deceptive.
 
 ![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/ali_haul.jpg)
 
