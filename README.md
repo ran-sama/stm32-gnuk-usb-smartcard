@@ -179,5 +179,9 @@ gpg --edit-key MyKey
 gpg> keytocard
 ```
 
+## Unknown, APM32, STM32
+
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/chip_packages.jpg)
+
 ## License
 Licensed under the WTFPL license.
