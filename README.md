@@ -66,7 +66,7 @@ make
 cp build/gnuk.bin /home/ran/gnukblue.bin
 ```
 ## Pre-built binaries
-They are here for archival reasons for myself. Is strongly advise you to build your own! This is a security device and flashing binaries by random people of the internet is not encouraged. Even if I promise I did not tamper them, do not use them. If you do, they will work, but you should be ashamed for being lazy!
+They are here for myself and archival reasons. I strongly advise you though to build your own: This is a security device and flashing binaries by random people of the internet is not encouraged. Though I promise they will work and were not tampered with, you cannot know that and being lazy is no excuse.
 
 ## License
 Licensed under the WTFPL license.
