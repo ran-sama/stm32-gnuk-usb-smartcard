@@ -152,6 +152,13 @@ I am sorry, but I couldn't bother. Use a CH34x or CP210x USB to UART adapter and
 ```
 https://www.st.com/en/development-tools/flasher-stm32.html#get-software
 ```
+Set the jumpers for flashing to:
+```
+BOOT0=1
+BOOT1=0
+```
+Set both to OFF afterwards successfully flashing.
+
 ![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/lazy_UART_bluepill.jpg)
 
 ![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/blue_flash_tool.png)
