@@ -7,7 +7,9 @@ Secure mail exchange via GPG, code signing and verified Github commits are popul
 Remove the covers of the sticks, because their pin-out is often wrong. Check with your multimeter for voltages.  
 The PCB is often correct but the cases are deceptive.
 
-![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/ali_haul.jpg)
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/windows_test.png)  
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/raspi_test.png)  
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/ali_haul.jpg)  
 
 Above is a typical 10 buck haul from Ali with discounts on first purchased per store. To cover your losses you should at least source 1 device only per store. You will get scammed either way, but all of these worked. The actual issue at hand is soldering quality, residues and trace contaminants on the PCBs as well as missing solder on connectors. You get exactly the "quality" you paid for.
 
@@ -147,8 +149,6 @@ reset halt
 The telnet console in putty for ```localhost 4444```.
 
 It will now be ready to be plugged into USB on its own without your JTAG interface! It works out of the box on both Windows and *NIX as card reader and smartcard in one device.  
-![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/windows_test.png)  
-![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/raspi_test.png)  
 
 ## Flashing with STM32 Flash loader via UART on BLUE_PILL
 
