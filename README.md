@@ -86,6 +86,8 @@ As with the programmers, measure first and avoid surprises in polarity.
 
 Running the JTAG protocol on top, the Serial Wire Debug (SWD) provides an elegant electrical alternative JTAG interface over 2-pins (SWDIO/SWCLK). The wire protocol is bi-directional and SWD is a recognized ARM CPU standard and defined in the ARM Debug Interface documentation.
 
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/SWD_JTAG.jpg)
+
 Let's initialize a few files on the go first.  
 
 Create a ```openocd.cfg```:
