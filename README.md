@@ -3,12 +3,11 @@ The Gnuk smartcard based on the STM32F1x and Geehy APM32.
 
 ## Introduction
 
-Secure mail exchange via GPG, code signing and verified Github commits are popular use cases of asymmetric cryptography utilizing cryptosystems such as RSA4096 or modern Ed/cv25519. Before you do anything:  
-Remove the covers of the sticks, because their pin-out is often wrong. Check with your multimeter for voltages.  
-The PCB is often correct but the cases are deceptive.
+Secure mail exchange via GPG, code signing and verified Github commits are popular use cases of asymmetric cryptography utilizing cryptosystems such as RSA4096 or modern Ed/cv25519.
 
 ![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/windows_test.png)  
 ![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/raspi_test.png)  
+Before you do anything: Remove the covers of the sticks, because their pin-out is often wrong. Check with your multimeter for voltages. The PCB is often correct but the cases are deceptive.  
 ![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/ali_haul.jpg)  
 
 Above is a typical 10 buck haul from Ali with discounts on first purchased per store. To cover your losses you should at least source 1 device only per store. You will get scammed either way, but all of these worked. The actual issue at hand is soldering quality, residues and trace contaminants on the PCBs as well as missing solder on connectors. You get exactly the "quality" you paid for.
