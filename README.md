@@ -182,6 +182,9 @@ gpg --full-generate-key
 gpg --edit-key MyKey
 gpg> keytocard
 ```
+```
+https://raymii.org/s/articles/Nitrokey_Start_Getting_started_guide.html
+```
 
 ## Unknown, APM32, STM32
 
