@@ -187,8 +187,11 @@ https://raymii.org/s/articles/Nitrokey_Start_Getting_started_guide.html
 
 ## Unknown, APM32, STM32
 
-![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/chip_packages.jpg)
-![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/terrible_okay_good.jpg)
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/chip_packages.jpg)  
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/terrible_okay_good.jpg)  
+![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/R10_USB_DP_pullup.png)  
+Picture 1-2 (Dongle): Common types of MCUs, soldering quality.  
+Picture 3 (Bluepill): Wrong resistor value preventing USB from working, bypass by calculating parallel resistance to lower to 1.5k Ohm.  
 
 ## License
 Licensed under the WTFPL license.
