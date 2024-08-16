@@ -41,13 +41,14 @@ It doesn't matter what you use, each according to their comfort. What works for 
 
 ## Building on *NIX
 
-I will not lose many words about building, the original repo is located here:
+I will not lose many words about building, the src repo and devs website (NIIBE Yutaka) are here:
 ```
 https://salsa.debian.org/gnuk-team/gnuk/gnuk
+https://www.gniibe.org/tag/gnuk.html
 ```
 For some reason, many professional Gnuk that are sold rebranded as Nitrokey Start et al. are using the 1.2.19 release, and ignore the 2.x branches as they may or may not be stable (yet), being ongoing in their development with exciting features such as Curve448. If you have enough boards it could be interesting though to explore.
 
-As Niibe Yutaka wrote in his post, I am not using ```--enable-hid-card-change``` as he reported that his users didn't seem to care for it. Also Nitrokey Start seems to have it commented out. You are now aware that you could use it, should you need it.
+As NIIBE Yutaka wrote in his post, I am not using ```--enable-hid-card-change``` as he reported that his users didn't seem to care for it. Also Nitrokey Start seems to have it commented out. You are now aware that you could use it, should you need it.
 
 For the ST-Link-v2 rip-off from China we use:
 ```
@@ -128,7 +129,7 @@ Launch OpenOCD on *NIX or Windows, it both just works:
 ```
 # for real STM32
 openocd -f openocd.cfg
-#for the APM32 clones:
+# for the APM32 clones:
 openocd -f openocd2.cfg
 ```
 ![alt text[]()](https://raw.githubusercontent.com/ran-sama/stm32-gnuk-usb-smartcard/master/images/OpenOCD_cli.jpg)
