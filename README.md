@@ -191,7 +191,7 @@ https://raymii.org/s/articles/Nitrokey_Start_Getting_started_guide.html
 ```
 My personal method for EC keys only, because RSA sucks:
 ```
-$ gpg --quick-generate-key 'Ran Yakumo (Github) <XXXXXXXX@XXXXXXXX.XX>' ed25519 cert never
+$ gpg --quick-generate-key 'Ran Yakumo (Github) <your@email.tld>' ed25519 cert never
 $ export KEYGR=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 $ gpg --quick-add-key $KEYGR ed25519 sign never
 $ gpg --quick-add-key $KEYGR cv25519 encr never
@@ -212,7 +212,7 @@ sec>  ed25519 2024-08-02 [C]
       AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       Keygrip = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
       Card serial no. = XXXX XXXXXXXX
-uid           [ultimate] Ran Yakumo (Github) <XXXXXXXX@XXXXXXXX.XX>
+uid           [ultimate] Ran Yakumo (Github) <your@email.tld>
 ssb>  ed25519 2024-08-02 [S]
       Keygrip = BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 ssb>  cv25519 2024-08-02 [E]
@@ -250,7 +250,7 @@ Your selection? 3
 gpg> save
 $ gpg --edit-card
 General key info..:
-sub  ed25519/XXXXXXXXXXXXXXXX 2024-08-02 Ran Yakumo (Github) <XXXXXXXX@XXXXXXXX.XX>
+sub  ed25519/XXXXXXXXXXXXXXXX 2024-08-02 Ran Yakumo (Github) <your@email.tld>
 sec>  ed25519/XXXXXXXXXXXXXXXX  created: 2024-08-02  expires: never
                                 card-no: XXXX XXXXXXXX
 ssb>  ed25519/XXXXXXXXXXXXXXXX  created: 2024-08-02  expires: never
